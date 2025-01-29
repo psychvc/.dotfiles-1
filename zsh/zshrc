@@ -18,6 +18,7 @@ setopt EXTENDED_GLOB        # Use extended globbing syntax.
 
 source $DOTFILES/zsh/plugins/bd.zsh
 
+source $DOTFILES/zsh/functions.zsh
 # +---------+
 # | HISTORY |
 # +---------+
@@ -191,3 +192,5 @@ source /usr/share/nvm/init-nvm.sh
 # +---------------------+
 
 source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval $(gdircolors ~/.dircolors)
+export PATH='/Users/psychv/.docker/bin:$HOME/.docker/bin:$PATH'
