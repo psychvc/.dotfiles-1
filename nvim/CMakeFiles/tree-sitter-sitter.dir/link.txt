@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -dynamiclib -Wl,-headerpad_max_install_names -compatibility_version 14.0.0 -o libtree-sitter-sitter.14.0.dylib -install_name @rpath/libtree-sitter-sitter.14.0.dylib "CMakeFiles/tree-sitter-sitter.dir/src/parser.c.o"

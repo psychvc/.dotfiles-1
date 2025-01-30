@@ -38,7 +38,8 @@ for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')
     execute 'source' file
 endfor
 
-" }}}
+"
+"}}}
 
 " +------------------+
 " | global variables |
@@ -174,11 +175,13 @@ nnoremap zz zR
 onoremap ir i[
 onoremap ar a[
 
-" }}}
+"
+"}}}
 
 " +---------------+
 " | User Commands |
-" +---------------+ {{{
+"
+"+---------------+ {{{
 
 " buffer cleanup - delete every buffer except the one open
 command! Ball :silent call general#Bdeleteonly()

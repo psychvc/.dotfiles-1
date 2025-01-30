@@ -2,6 +2,10 @@
 
 fpath=($DOTFILES/zsh/plugins $fpath)
 
+for file in $(ls -1 $DOTFILES/install/install-*.sh); 
+  do $file && source $file
+done
+
 # +------------+
 # | NAVIGATION |
 # +------------+
@@ -19,6 +23,9 @@ setopt EXTENDED_GLOB        # Use extended globbing syntax.
 source $DOTFILES/zsh/plugins/bd.zsh
 
 source $DOTFILES/zsh/functions.zsh
+
+[[ -f $HOME/.zprofile ]] && source $HOME/.zprofile
+
 # +---------+
 # | HISTORY |
 # +---------+
@@ -38,13 +45,13 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 
 # Override colors
-eval "$(dircolors -b $ZDOTDIR/dircolors)"
+eval "$(gdircolors -b $ZDOTDIR/dircolors)"
 
 # +---------+
 # | ALIASES |
 # +---------+
 
-source $DOTFILES/aliases/aliases
+source $HOME/aliases/aliases
 
 # +---------+
 # | SCRIPTS |
@@ -79,7 +86,7 @@ source $DOTFILES/zsh/plugins/notifyosd.zsh
 # +--------+
 
 fpath=($DOTFILES/zsh/prompt $fpath)
-source $DOTFILES/zsh/prompt/prompt_purification_setup
+source $DOTFILES/purification/prompt_purification_setup
 
 # +-----------+
 # | PROFILING |
@@ -185,12 +192,16 @@ source "$DOTFILES/zsh/bindings.zsh"
 # | Node |
 # +------+
 
-source /usr/share/nvm/init-nvm.sh
+source $(brew --prefix nvm)/nvm.sh
 
 # +---------------------+
 # | SYNTAX HIGHLIGHTING |
 # +---------------------+
 
-source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-eval $(gdircolors ~/.dircolors)
-export PATH='/Users/psychv/.docker/bin:$HOME/.docker/bin:$PATH'
+#source $DOTFILES/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source $DOTFILES/zsh-completions/zsh-completions.plugin.zsh
+source $DOTFILES/purification/prompt_purification_setup
+export PATH="$HOME/.docker/bin:$PATH"
+source $DOTFILES/install_functions.sh

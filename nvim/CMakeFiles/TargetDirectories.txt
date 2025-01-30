@@ -1,0 +1,8 @@
+/Users/psychv/.dotfiles/nvim/CMakeFiles/tree-sitter-sitter.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/ts-test.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/edit_cache.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/rebuild_cache.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/list_install_components.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/install.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/install/local.dir
+/Users/psychv/.dotfiles/nvim/CMakeFiles/install/strip.dir

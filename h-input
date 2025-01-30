@@ -1,0 +1,104 @@
+[93m[0m[93m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[93mmodified: .gitmodules
+[93m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;35m[1;35m@ .gitmodules:1 @[0m[0m
+[1;31m[submodule "zsh/plugins/zsh-completions"][m
+[1;31m	path = zsh/plugins/zsh-completions[m
+[1;31m    url = https://github.com/zsh-users/zsh-completions[m
+[1;31m[submodule "zsh/plugins/zsh-syntax-highlighting"][m
+[1;31m	path = zsh/plugins/zsh-syntax-highlighting[m
+[1;31m	url = https://github.com/zsh-users/zsh-syntax-highlighting[m
+[1;31m    branch = master[m
+[submodule "zsh/prompt"][m
+	path = zsh/prompt[m
+	url = https://github.com/Phantas0s/purification[m
+[1;31m    [m[1;33;48;5;52m[m[1;31mbranch = master[m
+[1;32m    [m[1;36;48;5;22m    [m[1;32mbranch = master[m
+[submodule "zsh-completions"][m
+[1;32m[m	[1;32mpath = $HOME/.extra/zsh_custom/plugins/zsh/plugins/zsh-completions[m
+	path = zsh-completions[m
+	url = https://github.com/zsh-users/zsh-completions[m
+[submodule "zsh-syntax-highlighting"][m
+	path = zsh-syntax-highlighting[m
+	url = https://github.com/zsh-users/zsh-syntax-highlighting[m
+[1;31m[submodule "purification"][m
+[1;31m	path = purification[m
+[1;31m	url = https://github.com/Phantas0s/purification[m
+[93minstall_functions.sh changed file mode from 100644 to 100755
+[93m[0m[93m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[93mmodified: nvim/init.vim
+[93m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;35m[1;35m@ nvim/init.vim:38 @[0m[1m[38;5;146m for file in split(glob('$VIMCONFIG/pluggedconf/*.nvimrc'), '\n')[0m
+    execute 'source' file[m
+endfor[m
+[m
+[1;31m" }}}[m
+[1;32m[m[1;32m"[m
+[1;32m[m[1;32m"}}}[m
+[m
+" +------------------+[m
+" | global variables |[m
+[1;35m[1;35m@ nvim/init.vim:175 @[0m[1m[38;5;146m nnoremap zz zR[0m
+onoremap ir i[[m
+onoremap ar a[[m
+[m
+[1;31m" }}}[m
+[1;32m[m[1;32m"[m
+[1;32m[m[1;32m"}}}[m
+[m
+" +---------------+[m
+" | User Commands |[m
+[1;31m" +---------------+ {{{[m
+[1;32m[m[1;32m"[m
+[1;32m[m[1;32m"+---------------+ {{{[m
+[m
+" buffer cleanup - delete every buffer except the one open[m
+command! Ball :silent call general#Bdeleteonly()[m
+Submodule purification contains modified content
+Submodule zsh/plugins/zsh-completions 3b247d30...00000000 (submodule deleted)
+Submodule zsh/plugins/zsh-syntax-highlighting c10808ad...00000000 (submodule deleted)
+[93m[0m[93m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[93mmodified: zsh/zshrc
+[93m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;35m[1;35m@ zsh/zshrc:19 @[0m[1m[38;5;146m setopt EXTENDED_GLOB        # Use extended globbing syntax.[0m
+source $DOTFILES/zsh/plugins/bd.zsh[m
+[m
+source $DOTFILES/zsh/functions.zsh[m
+[7m[1;32m [m
+[1;32m[m[1;32m[[ -f $HOME/.zprofile ]] && source $HOME/.zprofile[m
+[7m[1;32m [m
+# +---------+[m
+# | HISTORY |[m
+# +---------+[m
+[1;35m[1;35m@ zsh/zshrc:47 @[0m[1m[38;5;146m eval "$(dircolors -b $ZDOTDIR/dircolors)"[0m
+# | ALIASES |[m
+# +---------+[m
+[m
+[1;31msource $[m[1;33;48;5;52mDOTFILES[m[1;31m/aliases/aliases[m
+[1;32msource $[m[1;36;48;5;22mHOME[m[1;32m/aliases/aliases[m
+[m
+# +---------+[m
+# | SCRIPTS |[m
+[1;35m[1;35m@ zsh/zshrc:82 @[0m[1m[38;5;146m source $DOTFILES/zsh/plugins/notifyosd.zsh[0m
+# +--------+[m
+[m
+fpath=($DOTFILES/zsh/prompt $fpath)[m
+[1;31msource $DOTFILES/[m[1;33;48;5;52mzsh/prompt[m[1;31m/prompt_purification_setup[m
+[1;32msource $DOTFILES/[m[1;36;48;5;22mpurification[m[1;32m/prompt_purification_setup[m
+[m
+# +-----------+[m
+# | PROFILING |[m
+[1;35m[1;35m@ zsh/zshrc:194 @[0m[1m[38;5;146m source /usr/share/nvm/init-nvm.sh[0m
+# | SYNTAX HIGHLIGHTING |[m
+# +---------------------+[m
+[m
+[1;31msource $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh[m
+[1;31meval $(gdircolors ~/.dircolors)[m
+[1;31mexport PATH='/Users/psychv/.docker/bin:$HOME/.docker/bin:$PATH'[m
+[1;32m[m[1;32m#source $DOTFILES/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh[m
+[1;32m[m[1;32msource /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh[m
+[7m[1;32m [m
+[1;32m[m[1;32msource $DOTFILES/zsh-completions/zsh-completions.plugin.zsh[m
+[1;32m[m[1;32msource $DOTFILES/purification/prompt_purification_setup[m
+[1;32m[m[1;32mexport PATH="$HOME/.docker/bin:$PATH"[m
+[1;32m[m[1;32msource $DOTFILES/install_functions.sh[m

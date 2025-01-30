@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+9560cd3e4a5453519402dbbf3daaaf34 CMakeFiles/ts-test
+8baeefe401e578ceb022bf22631bd2e5 src/parser.c
